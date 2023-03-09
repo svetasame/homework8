@@ -344,29 +344,62 @@ int[,] SpiralizationArray(int[,] array)
 // Задача 61: Вывести первые N строк треугольника Паскаля. 
 // Сделать вывод в виде равнобедренного треугольника - не получилось
 
-int[][] Pascal(int n)
+int [,] FillPascal()
 {
-  int[][] triangle = new int[n][];
-  triangle[0] = new int[] { 1 };
-  for (int i = 1; i < n; i++)
+int row = 6;
+int [,] triangle = new int [row,row];
+  for (int i = 0; i < row; i++)
   {
-    triangle[i] = new int[i + 1];
-    int left = 0;
-    for (int j = 0; j < i; j++)
-    {
-      triangle[i][j] = triangle[i - 1][j] + left;
-      left = triangle[i - 1][j];
-    }
-    triangle[i][i] = left;
+    triangle[i, 0] = 1;
+    triangle[i, i] = 1;
   }
-  for (int i = 0; i < triangle.Length; i++)
+  for (int i = 2; i < row; i++)
   {
-    for (int j = 0; j < triangle[i].Length; j++)
-    { 
-    Console.Write("{0,-3}", triangle[i][j]); }
-    Console.WriteLine();
+    for (int j = 1; j <= i; j++)
+    {
+      triangle[i, j] = 
+      triangle[i - 1, j - 1] + triangle[i - 1, j];
+    }
   }
   return triangle;
 }
 
-Pascal(6);
+void PrintPascal (int [,] triangle)
+{
+  const int cellWidth = 5; // размер клеточки массива
+  int row = triangle.GetLength(0);
+  for (int i = 0; i < row; i++)
+  {
+    for (int j = 0; j < row; j++)
+    {
+      if (triangle [i,j]!=0) 
+      System.Console.Write($"{triangle[i,j],cellWidth}");
+    }
+    System.Console.WriteLine();
+  }
+}
+
+void IsoscelesTriangle(int[,] array)
+{
+  const int cellWidth = 5;
+  int row = array.GetLength(0);
+  int col = cellWidth * row;
+  for (int i = 0; i < row; i++)
+  {
+    for (int j = 0; j <= i; j++)
+    {
+      Console.SetCursorPosition(col, i + 1);
+      if (array[i, j] != 0)
+        System.Console.Write($"{array[i, j],cellWidth}");
+      col += cellWidth * 2;
+    }
+    col = cellWidth * row - cellWidth * (i + 1);
+    System.Console.WriteLine();
+  }
+}
+
+
+int [,] array =  FillPascal();
+// PrintPascal (array);
+System.Console.WriteLine();
+IsoscelesTriangle(array);
