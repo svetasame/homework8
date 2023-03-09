@@ -1,0 +1,15 @@
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\bin\Debug\net6.0\homeworkseminar8.exe
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\bin\Debug\net6.0\homeworkseminar8.deps.json
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\bin\Debug\net6.0\homeworkseminar8.runtimeconfig.json
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\bin\Debug\net6.0\homeworkseminar8.dll
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\bin\Debug\net6.0\homeworkseminar8.pdb
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\obj\Debug\net6.0\homeworkseminar8.csproj.AssemblyReference.cache
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\obj\Debug\net6.0\homeworkseminar8.GeneratedMSBuildEditorConfig.editorconfig
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\obj\Debug\net6.0\homeworkseminar8.AssemblyInfoInputs.cache
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\obj\Debug\net6.0\homeworkseminar8.AssemblyInfo.cs
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\obj\Debug\net6.0\homeworkseminar8.csproj.CoreCompileInputs.cache
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\obj\Debug\net6.0\homeworkseminar8.dll
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\obj\Debug\net6.0\refint\homeworkseminar8.dll
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\obj\Debug\net6.0\homeworkseminar8.pdb
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\obj\Debug\net6.0\homeworkseminar8.genruntimeconfig.cache
+J:\УЧЕБА ГИК БРЕЙНС\languages\eightseminar\homeworkseminar8\obj\Debug\net6.0\ref\homeworkseminar8.dll
