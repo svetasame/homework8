@@ -139,52 +139,41 @@ int[,,] GenerateThreeArray(int a, int b, int c)
 {
   int[,,] array = new int[a, b, c];
   Random ran = new Random();
-  for (int i = 0; i < array.GetLength(0); i++)
+  int gennumb;
+  int count = 0;
+  int[] arrayfornumber = new int[a + b + c + 2];
+  while (count < arrayfornumber.Length)
   {
-    for (int j = 0; j < array.GetLength(1); j++)
+    for (int g = 0; g < arrayfornumber.Length; g++)
     {
-      // System.Console.WriteLine();
-      for (int k = 0; k < array.GetLength(2); k++)
+      gennumb = ran.Next(10, 100);
+      if (gennumb == arrayfornumber[g]) { break; }
+      else
       {
-        array[i, j, k] = ran.Next(10,100);
-        // System.Console.Write($"{array[i, j, k]} ({i},{j},{k}) ");
+        arrayfornumber[g] = gennumb;
+        System.Console.Write($"{arrayfornumber[g]} ");
+        count++;
       }
     }
-  }
-  return array;
-}
-
-int[,,] GenNumber(int[,,] matrix)
-{
-  Random ran = new Random();
-  int length = matrix.Length;
-  int count = 0;
-  int gennumb;
-  while (count < length)
-  {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    int m = 0;
+    while (m < arrayfornumber.Length)
     {
-      for (int j = 0; j < matrix.GetLength(1); j++)
+      for (int i = 0; i < array.GetLength(0); i++)
       {
-        System.Console.WriteLine();
-        for (int k = 0; k < matrix.GetLength(2); k++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-          gennumb = ran.Next(10, 100);
-          if (gennumb == matrix[i, j, k])
+          System.Console.WriteLine();
+          for (int k = 0; k < array.GetLength(2); k++)
           {
-            break;
-          }
-          else
-          {
-            matrix[i, j, k] = gennumb;
-            System.Console.Write($"{matrix[i, j, k]} ({i},{j},{k}) ");
-            count++;
+            array[i, j, k] = arrayfornumber[m];
+            System.Console.Write($"{array[i, j, k]} ({i},{j},{k}) ");
+            m++;
           }
         }
       }
     }
   }
-  return matrix;
+  return array;
 }
 
 void GenerateThreeArrayAnother(int a, int b, int c)
@@ -316,11 +305,11 @@ int[,] SpiralizationArray(int[,] array)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
-// int x = Prompt ("введите количество элементов в 1 измерении");
-// int y = Prompt ("введите количество элементов в 2 измерении");
-// int z = Prompt ("введите количество элементов в 3 измерении");
-// int [,,] matrix = GenerateThreeArray(x, y, z);
-// GenNumber(matrix);
+int x = Prompt ("введите количество элементов в 1 измерении");
+int y = Prompt ("введите количество элементов в 2 измерении");
+int z = Prompt ("введите количество элементов в 3 измерении");
+System.Console.WriteLine("рандомные неповторяющиеся числа:");
+int [,,] matrix = GenerateThreeArray(x, y, z);
 
 // int x = Prompt ("введите количество элементов в 1 измерении");
 // int y = Prompt ("введите количество элементов в 2 измерении");
@@ -344,62 +333,9 @@ int[,] SpiralizationArray(int[,] array)
 // Задача 61: Вывести первые N строк треугольника Паскаля. 
 // Сделать вывод в виде равнобедренного треугольника - не получилось
 
-int [,] FillPascal()
-{
-int row = 6;
-int [,] triangle = new int [row,row];
-  for (int i = 0; i < row; i++)
-  {
-    triangle[i, 0] = 1;
-    triangle[i, i] = 1;
-  }
-  for (int i = 2; i < row; i++)
-  {
-    for (int j = 1; j <= i; j++)
-    {
-      triangle[i, j] = 
-      triangle[i - 1, j - 1] + triangle[i - 1, j];
-    }
-  }
-  return triangle;
-}
-
-void PrintPascal (int [,] triangle)
-{
-  const int cellWidth = 5; // размер клеточки массива
-  int row = triangle.GetLength(0);
-  for (int i = 0; i < row; i++)
-  {
-    for (int j = 0; j < row; j++)
-    {
-      if (triangle [i,j]!=0) 
-      System.Console.Write($"{triangle[i,j],cellWidth}");
-    }
-    System.Console.WriteLine();
-  }
-}
-
-void IsoscelesTriangle(int[,] array)
-{
-  const int cellWidth = 5;
-  int row = array.GetLength(0);
-  int col = cellWidth * row;
-  for (int i = 0; i < row; i++)
-  {
-    for (int j = 0; j <= i; j++)
-    {
-      Console.SetCursorPosition(col, i + 1);
-      if (array[i, j] != 0)
-        System.Console.Write($"{array[i, j],cellWidth}");
-      col += cellWidth * 2;
-    }
-    col = cellWidth * row - cellWidth * (i + 1);
-    System.Console.WriteLine();
-  }
-}
 
 
-int [,] array =  FillPascal();
-// PrintPascal (array);
-System.Console.WriteLine();
-IsoscelesTriangle(array);
+// int [,] array =  FillPascal();
+// // PrintPascal (array);
+// System.Console.WriteLine();
+// IsoscelesTriangle(array);
